@@ -22,8 +22,8 @@
 ;;(menu-bar-mode -1)
 
 ;; 设置字体
-(set-frame-font "Monaco-Regular-20")
-;;(set-face-attribute 'default nil :height 150)
+(set-frame-font "Monaco:Regular")
+(set-face-attribute 'default nil :height 140)
 
 ;; 所有buffer都打开company-mode补全
 (global-company-mode 1)
@@ -96,3 +96,20 @@
 
 ;; ===================================================================== 自定义变量、函数、快捷键 END ===========================================================
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
+ '(package-selected-packages
+   (quote
+    (solarized-theme monokai-theme molokai-theme ivy google-translate company))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
