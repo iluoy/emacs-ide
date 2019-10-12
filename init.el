@@ -110,7 +110,7 @@
     ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
  '(package-selected-packages
    (quote
-    (counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+    (magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
