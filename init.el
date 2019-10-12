@@ -13,10 +13,11 @@
 (global-linum-mode 1)
 
 ;; 打开显示列模式
-;;(column-number-mode 1)
+(column-number-mode 1)
 
 ;; 高亮显示当前行
 ;;(hl-line-highlight 1)
+(global-hl-line-mode 1)
 
 ;; 关闭滚动栏
 (scroll-bar-mode -1)
