@@ -65,7 +65,7 @@
 
 ;; ============================================= 自定义变量 Start =========================================
 ;; 主题列表
-(setq my/themelist '(monokai solarized-dark adwaita dichromacy leuven tsdh-light whiteboard))
+(setq my/themelist '(monokai solarized-dark adwaita dichromacy leuven tsdh-light whiteboard zenburn))
 
 ;; ============================================= 自定义变量 END   =========================================
 
@@ -108,12 +108,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(custom-safe-themes
    (quote
     ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
+ '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+    (anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
