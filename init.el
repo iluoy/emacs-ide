@@ -65,7 +65,7 @@
 
 ;; ============================================= 自定义变量 Start =========================================
 ;; 主题列表
-(setq my/themelist '(monokai solarized-dark adwaita dichromacy leuven tsdh-light whiteboard zenburn))
+(setq my/themelist '(monokai solarized-dark adwaita dichromacy leuven tsdh-light whiteboard zenburn spacemacs-dark spacemacs-light))
 
 ;; ============================================= 自定义变量 END   =========================================
 
@@ -116,7 +116,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+    (spacemacs-theme anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
