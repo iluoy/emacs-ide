@@ -12,6 +12,9 @@
 ;; 所有buffer都打开行号显示
 (global-linum-mode 1)
 
+;; 高亮显示当前行
+(hl-line-highlight 1)
+
 ;; 关闭滚动栏
 (scroll-bar-mode -1)
 
@@ -22,7 +25,7 @@
 ;;(menu-bar-mode -1)
 
 ;; 设置字体
-(set-frame-font "Monaco:Regular")
+;;(set-frame-font "Monaco:Regular")
 (set-frame-font "Monaco:pixelsize=14:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
 ;;(set-face-attribute 'default nil :height 140)
 
@@ -107,7 +110,8 @@
     ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
  '(package-selected-packages
    (quote
-    (solarized-theme monokai-theme molokai-theme ivy google-translate company))))
+    (counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+ '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
