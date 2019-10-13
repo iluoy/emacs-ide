@@ -9,6 +9,9 @@
 ;; Emacs启动的时候不显示欢迎页面
 (setq inhibit-splash-screen -1)
 
+;; 启动Emacs最大化
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; 所有buffer都打开行号显示
 (global-linum-mode 1)
 
@@ -41,6 +44,23 @@
 
 ;; 使用monokai主题,依赖monokai主题
 ;;(load-theme 'monokai t)
+
+;; 使用complete-anaconda作为anaconda-mode的backend
+;;(require 'rx)
+;;(eval-after-load "company"
+;;  '(add-to-list 'company-backends 'company-anaconda))
+
+;; 使用anaconda-mode
+;;(add-hook 'python-mode-hook 'anaconda-mode)
+;;(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
+;; 使用elpy作为python补全
+(exec-path-from-shell-initialize)
+(require 'use-package)
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
 
 ;; 使用google翻译
 ;; C-c t 将当前光标的英文单词翻译为中文
@@ -111,14 +131,54 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
+ '(compilation-message-face (quote default))
  '(custom-safe-themes
    (quote
     ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
+ '(fci-rule-color "#3C3D37")
+ '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+ '(highlight-tail-colors
+   (quote
+    (("#3C3D37" . 0)
+     ("#679A01" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#3C3D37" . 100))))
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (spacemacs-theme anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
- '(send-mail-function (quote smtpmail-send-it)))
+    (exec-path-from-shell elpy company-anaconda anaconda-mode spacemacs-theme anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+ '(pos-tip-background-color "#FFFACE")
+ '(pos-tip-foreground-color "#272822")
+ '(send-mail-function (quote smtpmail-send-it))
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#F92672")
+     (40 . "#CF4F1F")
+     (60 . "#C26C0F")
+     (80 . "#E6DB74")
+     (100 . "#AB8C00")
+     (120 . "#A18F00")
+     (140 . "#989200")
+     (160 . "#8E9500")
+     (180 . "#A6E22E")
+     (200 . "#729A1E")
+     (220 . "#609C3C")
+     (240 . "#4E9D5B")
+     (260 . "#3C9F79")
+     (280 . "#A1EFE4")
+     (300 . "#299BA6")
+     (320 . "#2896B5")
+     (340 . "#2790C3")
+     (360 . "#66D9EF"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (quote
+    (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
