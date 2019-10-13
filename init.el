@@ -39,6 +39,9 @@
 (set-frame-font "Monaco:pixelsize=14:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
 ;;(set-face-attribute 'default nil :height 140)
 
+;;打开括号自动配对显示
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
 ;; 所有buffer都打开company-mode补全
 (global-company-mode 1)
 
