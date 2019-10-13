@@ -22,6 +22,9 @@
 ;;(hl-line-highlight 1)
 (global-hl-line-mode 1)
 
+;; 输入内容替换选中的region
+(delete-selection-mode 1)
+
 ;; 关闭滚动栏
 (scroll-bar-mode -1)
 
