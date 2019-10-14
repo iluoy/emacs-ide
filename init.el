@@ -34,6 +34,15 @@
 ;; 关闭菜单栏
 ;;(menu-bar-mode -1)
 
+;; 关闭创建～结尾的备份文件
+(setq make-backup-files nil)
+
+;; 关闭创建#autosave#文件
+(setq auto-save-default nil)
+
+;; 关闭创建.#lock文件链接
+(setq create-lockfiles nil)
+
 ;; 设置字体
 ;;(set-frame-font "Monaco:Regular")
 (set-frame-font "Monaco:pixelsize=14:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
@@ -76,7 +85,7 @@
 (require 'google-translate)
 (global-set-key "\C-ct" 'google-translate-at-point)
 (global-set-key "\C-cT" 'google-translate-query-translate)
-(global-set-key (kbd "C-c r") 'google-translate-at-point-reverse)
+(global-set-key (kbd "C-c r") 'google--at-point-reverse)
 (global-set-key (kbd "C-c R") 'google-translate-query-translate-reverse)
 (setq-default google-translate-default-source-language "en")
 (setq-default google-translate-default-target-language "zh-CN")
@@ -156,7 +165,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell elpy company-anaconda anaconda-mode spacemacs-theme anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
+    (groovy-mode exec-path-from-shell elpy company-anaconda anaconda-mode spacemacs-theme anti-zenburn-theme zenburn-theme zencoding-mode magit counsel swiper solarized-theme monokai-theme molokai-theme ivy google-translate company)))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(send-mail-function (quote smtpmail-send-it))
