@@ -58,10 +58,18 @@
 (global-set-key (kbd "<f6>") 'recentf-open-files)
 
 ;; 所有buffer都打开company-mode补全
-(global-company-mode 1)
+(use-package company
+  :ensure t
+  :pin melpa
+  :init
+  (global-company-mode 1))
 
 ;; 开启ivy模式
-(ivy-mode 1)
+(use-package ivy
+  :ensure t
+  :pin melpa
+  :init
+  (ivy-mode 1))
 
 ;; 使用monokai主题,依赖monokai主题
 ;;(load-theme 'monokai t)
@@ -77,11 +85,16 @@
 
 ;; 使用elpy作为python补全
 (exec-path-from-shell-initialize)
-(require 'use-package)
 (use-package elpy
   :ensure t
+  :pin melpa
   :init
   (elpy-enable))
+;;(require 'use-package)
+;;(use-package elpy
+;;  :ensure t
+;;  :init
+;;  (elpy-enable))
 
 ;; 使用google翻译
 ;; C-c t 将当前光标的英文单词翻译为中文
