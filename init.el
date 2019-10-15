@@ -51,6 +51,12 @@
 ;;打开括号自动配对显示
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+;; 记录最近打开文件
+(recentf-mode 1)
+
+;; 绑定F6快速打开最近打开文件
+(global-set-key (kbd "<f6>") 'recentf-open-files)
+
 ;; 所有buffer都打开company-mode补全
 (global-company-mode 1)
 
