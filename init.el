@@ -58,7 +58,10 @@
 (global-set-key (kbd "<f6>") 'recentf-open-files)
 
 ;; 所有buffer都打开company-mode补全
-(global-company-mode 1)
+(setq use-package-always-ensure t)
+(use-package company
+  :config
+  (global-company-mode 1))
 
 ;; 开启ivy模式
 (ivy-mode 1)
@@ -155,7 +158,7 @@
  '(compilation-message-face (quote default))
  '(custom-safe-themes
    (quote
-    ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "11e57648ab04915568e558b77541d0e94e69d09c9c54c06075938b6abc0189d8" default)))
  '(fci-rule-color "#3C3D37")
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
