@@ -1,0 +1,7 @@
+#+SETUPFILE: ~/.emacs.d/org/readdocorg.setup
+#+AUTHOR: yaoyao
+#+CREATOR: li-xinyang
+#+TITLE: Master Emacs in 21 Days
+#+EMAIL: guanghui.qu@cocos2d-x.org
+#+OPTIONS: toc:3 num:nil
+#+STARTUP: showall

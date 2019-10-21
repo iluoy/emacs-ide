@@ -102,7 +102,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
  '(package-selected-packages
    (quote
     (elpy exec-path-from-shell ivy company zencoding-mode zenburn-theme yasnippet spacemacs-theme solarized-theme quelpa-use-package pyvenv pythonic monokai-theme molokai-theme magit highlight-indentation groovy-mode google-translate find-file-in-project counsel company-anaconda anti-zenburn-theme))))
