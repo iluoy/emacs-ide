@@ -34,6 +34,9 @@
   :init
   (elpy-enable))
 
+;; 加载init-org feature
+(require 'init-org)
+
 ;; 使用google翻译
 ;; C-c t 将当前光标的英文单词翻译为中文
 ;; C-c r 将当前光标的中文翻译为英文
