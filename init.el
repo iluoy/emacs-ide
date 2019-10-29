@@ -1,8 +1,18 @@
+;; 判断是否为macos,目前只适配了macos
+(if (not (string= system-type "darwin"))
+    (error "only support macos")
+    (message "yes,it's macos"))
+
 ;; 添加lisp目录到load-path变量
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 ;; 加载与插件无关的Emacs自带的配置
 (require 'init-base)
+
+;; 安装use-package插件
+(if (not (package-installed-p 'use-package))
+    (package-install 'use-package)
+  (message "use-package has been installed right!"))
 
 ;; 所有buffer都打开company-mode补全
 (use-package company
@@ -98,20 +108,3 @@
 
 
 ;; ===================================================================== 自定义变量、函数、快捷键 END ===========================================================
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
- '(package-selected-packages
-   (quote
-    (elpy exec-path-from-shell ivy company zencoding-mode zenburn-theme yasnippet spacemacs-theme solarized-theme quelpa-use-package pyvenv pythonic monokai-theme molokai-theme magit highlight-indentation groovy-mode google-translate find-file-in-project counsel company-anaconda anti-zenburn-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
