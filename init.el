@@ -47,25 +47,6 @@
 ;; 加载init-org feature
 (require 'init-org)
 
-;; 使用google翻译
-;; C-c t 将当前光标的英文单词翻译为中文
-;; C-c r 将当前光标的中文翻译为英文
-;; C-c T 自己输入英文进行翻译
-;; C-c R 自己输入中文进行翻译
-(require 'google-translate)
-(global-set-key "\C-ct" 'google-translate-at-point)
-(global-set-key "\C-cT" 'google-translate-query-translate)
-(global-set-key (kbd "C-c r") 'google--at-point-reverse)
-(global-set-key (kbd "C-c R") 'google-translate-query-translate-reverse)
-(setq-default google-translate-default-source-language "en")
-(setq-default google-translate-default-target-language "zh-CN")
-(eval-after-load 'google-translate-core
-  '(setq google-translate-base-url "http://translate.google.cn/translate_a/single"
-         google-translate-listen-url "http://translate.google.cn/translate_tts"))
-
-(eval-after-load 'google-translate-tk
-  '(setq google-translate--tkk-url "http://translate.google.cn/"))
-
 
 ;; ======================================================================= 自定义变量、函数、快捷键 START =======================================================
 
@@ -108,3 +89,18 @@
 
 
 ;; ===================================================================== 自定义变量、函数、快捷键 END ===========================================================
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (chinese-word-at-point names popup zencoding-mode zenburn-theme spacemacs-theme solarized-theme quelpa-use-package pythonic monokai-theme molokai-theme magit groovy-mode google-translate exec-path-from-shell elpy counsel company-anaconda anti-zenburn-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
