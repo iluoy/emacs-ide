@@ -55,8 +55,5 @@
 ;; 绑定F6快速打开最近打开文件
 (global-set-key (kbd "<f6>") 'recentf-open-files)
 
-;; 使用spacemas-light theme
-;;(load-theme 'spacemacs-light)
-
 ;; 提供init-base feature
 (provide 'init-base)
