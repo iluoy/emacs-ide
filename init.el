@@ -25,6 +25,12 @@
 ;; 加载init-elpy feature
 (require 'init-elpy)
 
+;; 加载init-go feature
+(require 'init-go)
+
+;; 加载init-smartparens feature
+(require 'init-smartparens)
+
 ;; 加载init-org feature
 (require 'init-org)
 
