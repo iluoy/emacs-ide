@@ -1,5 +1,7 @@
 ;; 定义想要安装的主题列表
 (setq my/theme-list '(
+		      solarized-theme
+		      zenburn-theme
 		      spacemacs-theme
 		      monokai-theme
 		      molokai-theme))

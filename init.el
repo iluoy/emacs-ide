@@ -31,6 +31,9 @@
 ;; 加载init-smartparens feature
 (require 'init-smartparens)
 
+;; 加载init-neotree featrue
+(require 'init-neotree)
+
 ;; 加载init-org feature
 (require 'init-org)
 
