@@ -34,6 +34,15 @@
 ;; 关闭菜单栏
 ;;(menu-bar-mode -1)
 
+;; 打开自动换行
+(toggle-truncate-lines 1)
+
+;; ORG中自动换行
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
+;; 自动对齐表格
+(add-hook 'org-mode-hook #'valign-mode)
+
 ;; 关闭创建～结尾的备份文件
 (setq make-backup-files nil)
 
@@ -42,6 +51,9 @@
 
 ;; 关闭创建.#lock文件链接
 (setq create-lockfiles nil)
+
+;; 在ORG模式下启动Emacs就能显示图像
+;;(setq org-startup-with-inline-images t)
 
 ;; 设置字体
 (set-frame-font "Monaco:pixelsize=14:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
